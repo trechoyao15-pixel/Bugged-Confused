@@ -53,7 +53,7 @@ http://localhost/ltms/admin_login.php  # Admin portal
 | Role | Email / Username | Password |
 |---|---|---|
 | Admin | `admin@gmail.com` | `admin` |
-| User | `jdoe` | `password123` |
+| User | `ronjie` | `12345` |
 
 ---
 
