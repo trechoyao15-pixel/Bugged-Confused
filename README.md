@@ -1,4 +1,4 @@
-# LTMS — Lost & Found Tracking Management System
+# FindIt Campus - Smart Lost and Found for Campuses
 
 A web-based platform for campuses and organizations to report, claim, and return lost items — with admin-verified claim management.
 
