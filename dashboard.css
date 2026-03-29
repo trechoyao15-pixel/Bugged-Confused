@@ -1,0 +1,191 @@
+:root{
+  --accent: #4B6EF6;
+  --accent-2: #7B9CFF;
+  --muted: #6b7280;
+  --text: #07103a;
+  --card-bg: #ffffff;
+  --table-head-bg: #f4f6f8;
+  --divider: #eef3f7;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(2,6,23,0.06);
+}
+
+.wrap.admin-wrap {
+  max-width: 1240px;
+  margin: 32px auto;
+  padding: 28px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.site-header { background: transparent; border: 0; padding: 0; }
+
+.section-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 18px 0;
+}
+
+.card {
+  width: 100%;
+  max-width: 1100px;      
+  margin: 0 auto 28px;     
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 26px;
+  border: 1px solid rgba(15,23,42,0.04);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.table-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 28px;
+  box-sizing: border-box;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  min-width: 880px; /* wide but will scroll inside .table-wrapper */
+  background: transparent;
+}
+
+.items-table thead th {
+  background: var(--table-head-bg);
+  padding: 18px 18px;
+  font-weight: 800;
+  color: var(--text);
+  text-align: left;
+  border-bottom: 1px solid var(--divider);
+  white-space: nowrap;
+}
+
+.items-table td, .items-table th {
+  padding: 18px 18px;
+  vertical-align: middle;
+  color: var(--text);
+  font-size: 15px;
+  border-bottom: 1px solid var(--divider);
+}
+
+.items-table tbody tr:last-child td { border-bottom: none; }
+
+.thumb {
+  width: 96px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 8px;
+  display:block;
+  box-shadow: 0 2px 8px rgba(2,6,23,0.04);
+}
+.thumb-placeholder {
+  width:96px; height:68px; border-radius:8px;
+  background:#f3f4f6; display:flex; align-items:center; justify-content:center; color:var(--muted);
+}
+
+.items-table td:nth-child(2),
+.items-table td:nth-child(3) {
+  white-space: normal;
+  max-width: 420px;
+  word-break: break-word;
+}
+
+.status-form {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin:0;
+}
+.status-form select {
+  min-width:180px;
+  padding:9px 12px;
+  border-radius:10px;
+  border:1px solid rgba(15,23,42,0.08);
+  background:#fff;
+  font-weight:700;
+  color:var(--text);
+  box-shadow: 0 1px 0 rgba(2,6,23,0.02);
+}
+
+.actions-cell {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  white-space:nowrap;
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:700;
+  border:none;
+  box-sizing: border-box;
+}
+.btn-outline {
+  background: #fff;
+  border: 1px solid rgba(15,23,42,0.06);
+  color: var(--muted);
+  box-shadow: 0 2px 8px rgba(2,6,23,0.03);
+}
+.btn-primary {
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:#fff;
+  box-shadow: 0 8px 20px rgba(75,110,246,0.12);
+}
+.btn-update {
+  padding:8px 12px;
+  border-radius:10px;
+  background:#fff;
+  border:1px solid rgba(15,23,42,0.06);
+  color:var(--text);
+  box-shadow: 0 2px 6px rgba(2,6,23,0.03);
+}
+.btn-delete {
+  padding:8px 12px;
+  border-radius:10px;
+  background:#fff;
+  border:1px solid rgba(15,23,42,0.06);
+  color:var(--muted);
+  box-shadow: 0 2px 6px rgba(2,6,23,0.03);
+}
+
+.group-divider { height:1px; background:var(--divider); margin: 12px 0; border-radius:1px; }
+
+@media (max-width: 1200px) {
+  .card, .table-card { max-width: 1000px; }
+  .items-table { min-width: 760px; }
+}
+@media (max-width: 992px) {
+  .wrap.admin-wrap { max-width: 920px; padding: 22px; }
+  .card, .table-card { max-width: 860px; }
+  .items-table { min-width: 680px; }
+}
+@media (max-width: 760px) {
+  .wrap.admin-wrap { margin: 18px auto; padding: 12px; }
+  .card, .table-card { max-width: 100%; margin: 0 0 18px; padding: 14px; }
+  .items-table thead { display: none; }
+  .items-table, .items-table tbody, .items-table tr, .items-table td { display:block; width:100%; }
+  .items-table td { padding:10px 12px; }
+  .status-form { flex-direction: column; align-items:stretch; gap:8px; }
+  .status-form select { width:100%; }
+  .actions-cell { gap:8px; flex-wrap:wrap; }
+  .btn-update, .btn-delete { width: 48%; }
+}
+
+html, body { height: auto; min-height: 100%; }
+.wrap.admin-wrap { overflow: visible; }
