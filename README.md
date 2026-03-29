@@ -2,7 +2,7 @@
 
 A web-based platform for campuses and organizations to report, claim, and return lost items — with admin-verified claim management.
 
-> **SDG Alignment:** SDG 11 (Sustainable Cities) · SDG 16 (Strong Institutions)
+> **SDG Alignment:** SDG 12
 
 ---
 
